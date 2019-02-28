@@ -1,0 +1,20 @@
+{
+  "name": "seasoned-auth-forms-web-example",
+  "homepage": "https://SeasonedSoftware.github.io/seasoned-auth-forms-web",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "^1.1.4",
+    "seasoned-auth-forms-web": "link:.."
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
