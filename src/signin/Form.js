@@ -1,11 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Form } from 'formik'
 import { Grid } from '@material-ui/core'
 
 import Field from '../components/Field'
 import Button from '../components/Button'
+import Loading from '../components/Loading'
+import Error from '../components/Error'
 
-const SignInForm = ({ form: { values, ...form }, submitting, ...props }) => (
+const SignInForm = ({ form, submitting, submitError, ...props }) => (
   <Grid
     container
     alignContent={'center'}
@@ -19,7 +22,7 @@ const SignInForm = ({ form: { values, ...form }, submitting, ...props }) => (
         name={'email'}
         label={'Email'}
         type={'email'}
-        value={values.email}
+        value={form.values.email}
         fullWidth
       />
       <Field
@@ -28,9 +31,11 @@ const SignInForm = ({ form: { values, ...form }, submitting, ...props }) => (
         name={'password'}
         label={'Password'}
         type={'password'}
-        value={values.password}
+        value={form.values.password}
         fullWidth
       />
+      {submitError && <Error>{submitError}</Error>}
+      {submitting && <Loading style={{ alignSelf: 'center' }} />}
       <Grid container justify="center">
         <Button
           text={props.buttonText}
@@ -43,6 +48,11 @@ const SignInForm = ({ form: { values, ...form }, submitting, ...props }) => (
 
 SignInForm.defaultProps = {
   buttonText: 'Login',
+}
+
+SignInForm.propTypes = {
+  submitting: PropTypes.bool.isRequired,
+  submitError: PropTypes.string.isRequired,
 }
 
 export default SignInForm
