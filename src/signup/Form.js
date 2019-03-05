@@ -52,4 +52,11 @@ SignUpForm.defaultProps = {
   buttonText: 'SignUp',
 }
 
+SignUpForm.propTypes = {
+  buttonText: PropTypes.string,
+  form: PropTypes.object,
+  submitError: PropTypes.string,
+  submitting: PropTypes.bool,
+}
+
 export default SignUpForm
