@@ -30,6 +30,7 @@ exports[`renders correctly 1`] = `
     <div
       disabled={false}
       text="Login"
+      type="submit"
     >
       Button
     </div>
@@ -76,6 +77,7 @@ exports[`while submitting renders correctly 1`] = `
     <div
       disabled={true}
       text="Login"
+      type="submit"
     >
       Button
     </div>
@@ -109,6 +111,7 @@ exports[`with custom renderButtom renders correctly 1`] = `
   
   <div
     disabled={false}
+    text="Login"
     type="submit"
   >
     Button
@@ -148,6 +151,7 @@ exports[`with submit errors renders correctly 1`] = `
     <div
       disabled={false}
       text="Login"
+      type="submit"
     >
       Button
     </div>
@@ -193,6 +197,7 @@ exports[`with validation errors renders correctly 1`] = `
     <div
       disabled={true}
       text="Login"
+      type="submit"
     >
       Button
     </div>
