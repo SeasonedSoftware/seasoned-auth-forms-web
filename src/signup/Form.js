@@ -8,11 +8,11 @@ import Button from '../components/Button'
 import Loading from '../components/Loading'
 import Error from '../components/Error'
 
-const SignInForm = ({ form, submitting, submitError, ...props }) => (
+const SignUpForm = ({ form, submitting, submitError, ...props }) => (
   <Form>
     <Field
       {...form}
-      key={'email'}
+      key={'signUpEmail'}
       name={'email'}
       label={'Email'}
       type={'email'}
@@ -21,11 +21,20 @@ const SignInForm = ({ form, submitting, submitError, ...props }) => (
     />
     <Field
       {...form}
-      key={'password'}
+      key={'signUpPassword'}
       name={'password'}
       label={'Password'}
       type={'password'}
       value={form.values.password}
+      fullWidth
+    />
+    <Field
+      {...form}
+      key={'signUpPasswordConfirmation'}
+      name={'passwordConfirmation'}
+      label={'Password Confirmation'}
+      type={'password'}
+      value={form.values.passwordConfirmation}
       fullWidth
     />
     {submitError && <Error>{submitError}</Error>}
@@ -39,15 +48,15 @@ const SignInForm = ({ form, submitting, submitError, ...props }) => (
   </Form>
 )
 
-SignInForm.defaultProps = {
-  buttonText: 'Login',
+SignUpForm.defaultProps = {
+  buttonText: 'SignUp',
 }
 
-SignInForm.propTypes = {
+SignUpForm.propTypes = {
   buttonText: PropTypes.string,
   form: PropTypes.object,
   submitError: PropTypes.string,
   submitting: PropTypes.bool,
 }
 
-export default SignInForm
+export default SignUpForm
