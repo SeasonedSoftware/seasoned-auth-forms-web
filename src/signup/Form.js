@@ -1,15 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Form } from 'formik'
-import { Grid } from '@material-ui/core'
 
+import AuthForm from '../components/Form'
 import Field from '../components/Field'
-import Button from '../components/Button'
-import Loading from '../components/Loading'
-import Error from '../components/Error'
 
-const SignUpForm = ({ form, submitting, submitError, ...props }) => (
-  <Form>
+const SignUpForm = ({ form, ...props }) => (
+  <AuthForm {...props} form={form}>
     <Field
       {...form}
       key={'signUpEmail'}
@@ -37,26 +32,11 @@ const SignUpForm = ({ form, submitting, submitError, ...props }) => (
       value={form.values.passwordConfirmation}
       fullWidth
     />
-    {submitError && <Error>{submitError}</Error>}
-    {submitting && <Loading style={{ alignSelf: 'center' }} />}
-    <Grid container justify="center">
-      <Button
-        text={props.buttonText}
-        disabled={submitting || Object.entries(form.errors).length > 0}
-      />
-    </Grid>
-  </Form>
+  </AuthForm>
 )
 
 SignUpForm.defaultProps = {
   buttonText: 'SignUp',
-}
-
-SignUpForm.propTypes = {
-  buttonText: PropTypes.string,
-  form: PropTypes.object,
-  submitError: PropTypes.string,
-  submitting: PropTypes.bool,
 }
 
 export default SignUpForm

@@ -1,53 +1,34 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Form } from 'formik'
-import { Grid } from '@material-ui/core'
 
+import AuthForm from '../components/Form'
 import Field from '../components/Field'
-import Button from '../components/Button'
-import Loading from '../components/Loading'
-import Error from '../components/Error'
 
-const SignInForm = ({ form, submitting, submitError, ...props }) => (
-  <Form>
-    <Field
-      {...form}
-      key={'email'}
-      name={'email'}
-      label={'Email'}
-      type={'email'}
-      value={form.values.email}
-      fullWidth
-    />
-    <Field
-      {...form}
-      key={'password'}
-      name={'password'}
-      label={'Password'}
-      type={'password'}
-      value={form.values.password}
-      fullWidth
-    />
-    {submitError && <Error>{submitError}</Error>}
-    {submitting && <Loading style={{ alignSelf: 'center' }} />}
-    <Grid container justify="center">
-      <Button
-        text={props.buttonText}
-        disabled={submitting || Object.entries(form.errors).length > 0}
+const SignInForm = props => {
+  return (
+    <AuthForm {...props}>
+      <Field
+        {...props.form}
+        key={'email'}
+        name={'email'}
+        label={'Email'}
+        type={'email'}
+        value={props.form.values.email}
+        fullWidth
       />
-    </Grid>
-  </Form>
-)
+      <Field
+        {...props.form}
+        key={'password'}
+        name={'password'}
+        label={'Password'}
+        type={'password'}
+        value={props.form.values.password}
+        fullWidth
+      />
+    </AuthForm>
+  )
+}
 
 SignInForm.defaultProps = {
   buttonText: 'Login',
 }
-
-SignInForm.propTypes = {
-  buttonText: PropTypes.string,
-  form: PropTypes.object,
-  submitError: PropTypes.string,
-  submitting: PropTypes.bool,
-}
-
 export default SignInForm

@@ -73,3 +73,19 @@ describe('with submit errors', () => {
     expect(tree).toMatchSnapshot()
   })
 })
+
+describe('with custom renderButtom', () => {
+  it('renders correctly', () => {
+    const props = {
+      form: {
+        values: {},
+        errors: {},
+      },
+      submitError: '',
+      submitting: false,
+      renderButton: buttonProps => <div {...buttonProps}>Button</div>,
+    }
+    const tree = renderer.create(<Form {...props} />).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+})
