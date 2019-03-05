@@ -1,203 +1,167 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div
-  className="MuiGrid-container-1 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18"
-  style={
-    Object {
-      "margin": "30px 0",
-    }
-  }
->
-  <div>
-    Form - 
+<div>
+  Form - 
+  <div
+    errors={Object {}}
+    fullWidth={true}
+    label="Email"
+    name="email"
+    type="email"
+    values={Object {}}
+  >
+    Field
+  </div>
+  <div
+    errors={Object {}}
+    fullWidth={true}
+    label="Password"
+    name="password"
+    type="password"
+    values={Object {}}
+  >
+    Field
+  </div>
+  
+  <div
+    className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
+  >
     <div
-      errors={Object {}}
-      fullWidth={true}
-      label="Email"
-      name="email"
-      type="email"
-      values={Object {}}
+      disabled={false}
+      text="Login"
     >
-      Field
-    </div>
-    <div
-      errors={Object {}}
-      fullWidth={true}
-      label="Password"
-      name="password"
-      type="password"
-      values={Object {}}
-    >
-      Field
-    </div>
-    
-    <div
-      className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
-    >
-      <div
-        disabled={false}
-        text="Login"
-      >
-        Button
-      </div>
+      Button
     </div>
   </div>
 </div>
 `;
 
 exports[`while submitting renders correctly 1`] = `
-<div
-  className="MuiGrid-container-1 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18"
-  style={
-    Object {
-      "margin": "30px 0",
-    }
-  }
->
-  <div>
-    Form - 
-    <div
-      errors={Object {}}
-      fullWidth={true}
-      label="Email"
-      name="email"
-      type="email"
-      values={Object {}}
-    >
-      Field
-    </div>
-    <div
-      errors={Object {}}
-      fullWidth={true}
-      label="Password"
-      name="password"
-      type="password"
-      values={Object {}}
-    >
-      Field
-    </div>
-    
-    <div
-      style={
-        Object {
-          "alignSelf": "center",
-        }
+<div>
+  Form - 
+  <div
+    errors={Object {}}
+    fullWidth={true}
+    label="Email"
+    name="email"
+    type="email"
+    values={Object {}}
+  >
+    Field
+  </div>
+  <div
+    errors={Object {}}
+    fullWidth={true}
+    label="Password"
+    name="password"
+    type="password"
+    values={Object {}}
+  >
+    Field
+  </div>
+  
+  <div
+    style={
+      Object {
+        "alignSelf": "center",
       }
-    >
-      Loading
-    </div>
+    }
+  >
+    Loading
+  </div>
+  <div
+    className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
+  >
     <div
-      className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
+      disabled={true}
+      text="Login"
     >
-      <div
-        disabled={true}
-        text="Login"
-      >
-        Button
-      </div>
+      Button
     </div>
   </div>
 </div>
 `;
 
 exports[`with submit errors renders correctly 1`] = `
-<div
-  className="MuiGrid-container-1 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18"
-  style={
-    Object {
-      "margin": "30px 0",
-    }
-  }
->
+<div>
+  Form - 
+  <div
+    errors={Object {}}
+    fullWidth={true}
+    label="Email"
+    name="email"
+    type="email"
+    values={Object {}}
+  >
+    Field
+  </div>
+  <div
+    errors={Object {}}
+    fullWidth={true}
+    label="Password"
+    name="password"
+    type="password"
+    values={Object {}}
+  >
+    Field
+  </div>
   <div>
-    Form - 
+    Error
+  </div>
+  <div
+    className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
+  >
     <div
-      errors={Object {}}
-      fullWidth={true}
-      label="Email"
-      name="email"
-      type="email"
-      values={Object {}}
+      disabled={false}
+      text="Login"
     >
-      Field
-    </div>
-    <div
-      errors={Object {}}
-      fullWidth={true}
-      label="Password"
-      name="password"
-      type="password"
-      values={Object {}}
-    >
-      Field
-    </div>
-    <div>
-      Error
-    </div>
-    <div
-      className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
-    >
-      <div
-        disabled={false}
-        text="Login"
-      >
-        Button
-      </div>
+      Button
     </div>
   </div>
 </div>
 `;
 
 exports[`with validation errors renders correctly 1`] = `
-<div
-  className="MuiGrid-container-1 MuiGrid-align-content-xs-center-13 MuiGrid-justify-xs-center-18"
-  style={
-    Object {
-      "margin": "30px 0",
+<div>
+  Form - 
+  <div
+    errors={
+      Object {
+        "email": "is not a valid email",
+      }
     }
-  }
->
-  <div>
-    Form - 
-    <div
-      errors={
-        Object {
-          "email": "is not a valid email",
-        }
+    fullWidth={true}
+    label="Email"
+    name="email"
+    type="email"
+    values={Object {}}
+  >
+    Field
+  </div>
+  <div
+    errors={
+      Object {
+        "email": "is not a valid email",
       }
-      fullWidth={true}
-      label="Email"
-      name="email"
-      type="email"
-      values={Object {}}
-    >
-      Field
-    </div>
+    }
+    fullWidth={true}
+    label="Password"
+    name="password"
+    type="password"
+    values={Object {}}
+  >
+    Field
+  </div>
+  
+  <div
+    className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
+  >
     <div
-      errors={
-        Object {
-          "email": "is not a valid email",
-        }
-      }
-      fullWidth={true}
-      label="Password"
-      name="password"
-      type="password"
-      values={Object {}}
+      disabled={true}
+      text="Login"
     >
-      Field
-    </div>
-    
-    <div
-      className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
-    >
-      <div
-        disabled={true}
-        text="Login"
-      >
-        Button
-      </div>
+      Button
     </div>
   </div>
 </div>

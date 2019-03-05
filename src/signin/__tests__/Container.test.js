@@ -12,7 +12,7 @@ jest.mock('formik', () => ({
 jest.mock('../Form', () => props => <div {...props}>Form</div>)
 
 it('renders correctly', () => {
-  const props = { onSubmit: jest.fn() }
+  const props = { onSubmit: jest.fn(), submitting: false }
   const tree = renderer.create(<Container {...props} />).toJSON()
   expect(tree).toMatchSnapshot()
 })

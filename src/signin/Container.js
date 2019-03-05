@@ -19,6 +19,6 @@ const SignIn = ({ onSubmit, ...props }) => (
 
 SignIn.propTypes = {
   onSubmit: PropTypes.func.isRequired,
+  submitting: PropTypes.bool.isRequired,
 }
-
 export default SignIn
