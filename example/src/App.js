@@ -31,7 +31,7 @@ export default props => {
                 />
               )}
             />
-            {/* <New
+            <New
               name="signup"
               path="/"
               render={({ create, creating, error }) => (
@@ -46,7 +46,7 @@ export default props => {
                   )}
                 />
               )}
-            /> */}
+            />
           </Grid>
         </MuiThemeProvider>
       </CroodsProvider>
