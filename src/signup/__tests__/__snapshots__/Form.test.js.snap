@@ -40,6 +40,7 @@ exports[`renders correctly 1`] = `
     <div
       disabled={false}
       text="SignUp"
+      type="submit"
     >
       Button
     </div>
@@ -96,9 +97,54 @@ exports[`while submitting renders correctly 1`] = `
     <div
       disabled={true}
       text="SignUp"
+      type="submit"
     >
       Button
     </div>
+  </div>
+</div>
+`;
+
+exports[`with custom renderButtom renders correctly 1`] = `
+<div>
+  Form - 
+  <div
+    errors={Object {}}
+    fullWidth={true}
+    label="Email"
+    name="email"
+    type="email"
+    values={Object {}}
+  >
+    Field
+  </div>
+  <div
+    errors={Object {}}
+    fullWidth={true}
+    label="Password"
+    name="password"
+    type="password"
+    values={Object {}}
+  >
+    Field
+  </div>
+  <div
+    errors={Object {}}
+    fullWidth={true}
+    label="Password Confirmation"
+    name="passwordConfirmation"
+    type="password"
+    values={Object {}}
+  >
+    Field
+  </div>
+  
+  <div
+    disabled={false}
+    text="SignUp"
+    type="submit"
+  >
+    Button
   </div>
 </div>
 `;
@@ -145,6 +191,7 @@ exports[`with submit errors renders correctly 1`] = `
     <div
       disabled={false}
       text="SignUp"
+      type="submit"
     >
       Button
     </div>
@@ -204,6 +251,7 @@ exports[`with validation errors renders correctly 1`] = `
     <div
       disabled={true}
       text="SignUp"
+      type="submit"
     >
       Button
     </div>

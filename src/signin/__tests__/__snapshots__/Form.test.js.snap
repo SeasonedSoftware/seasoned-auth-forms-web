@@ -83,6 +83,39 @@ exports[`while submitting renders correctly 1`] = `
 </div>
 `;
 
+exports[`with custom renderButtom renders correctly 1`] = `
+<div>
+  Form - 
+  <div
+    errors={Object {}}
+    fullWidth={true}
+    label="Email"
+    name="email"
+    type="email"
+    values={Object {}}
+  >
+    Field
+  </div>
+  <div
+    errors={Object {}}
+    fullWidth={true}
+    label="Password"
+    name="password"
+    type="password"
+    values={Object {}}
+  >
+    Field
+  </div>
+  
+  <div
+    disabled={false}
+    type="submit"
+  >
+    Button
+  </div>
+</div>
+`;
+
 exports[`with submit errors renders correctly 1`] = `
 <div>
   Form - 

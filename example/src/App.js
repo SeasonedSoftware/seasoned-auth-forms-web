@@ -2,7 +2,7 @@ import React from 'react'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { Provider } from 'react-redux'
 import { New, Provider as CroodsProvider } from 'croods'
-import { Grid } from '@material-ui/core'
+import { Grid, Button } from '@material-ui/core'
 
 import { SignIn, SignUp } from 'seasoned-auth-forms-web'
 
@@ -39,6 +39,11 @@ export default props => {
                   onSubmit={create}
                   submitting={creating}
                   submitError={error}
+                  renderButton={buttonProps => (
+                    <Button type="submit" variant="outlined" {...buttonProps}>
+                      Que loucura bixo
+                    </Button>
+                  )}
                 />
               )}
             />
