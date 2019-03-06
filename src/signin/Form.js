@@ -1,34 +1,20 @@
 import React from 'react'
 
 import AuthForm from '../components/Form'
-import Field from '../components/Field'
+import EmailField from '../components/EmailField'
+import PasswordField from '../components/PasswordField'
 
-const SignInForm = props => {
+const SignInForm = ({ language, ...props }) => {
   return (
     <AuthForm {...props}>
-      <Field
-        {...props.form}
-        key={'email'}
-        name={'email'}
-        label={'Email'}
-        type={'email'}
-        value={props.form.values.email}
-        fullWidth
-      />
-      <Field
-        {...props.form}
-        key={'password'}
-        name={'password'}
-        label={'Password'}
-        type={'password'}
-        value={props.form.values.password}
-        fullWidth
-      />
+      <EmailField {...props.form} language={language} />
+      <PasswordField {...props.form} language={language} />
     </AuthForm>
   )
 }
 
 SignInForm.defaultProps = {
   buttonText: 'Login',
+  language: 'en-US',
 }
 export default SignInForm
