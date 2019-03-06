@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
   Form - 
   <div
     errors={Object {}}
@@ -53,7 +59,13 @@ exports[`renders correctly 1`] = `
 `;
 
 exports[`while submitting renders correctly 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
   Form - 
   <div
     errors={Object {}}
@@ -114,7 +126,13 @@ exports[`while submitting renders correctly 1`] = `
 `;
 
 exports[`with custom renderButtom renders correctly 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
   Form - 
   <div
     errors={Object {}}
@@ -162,7 +180,13 @@ exports[`with custom renderButtom renders correctly 1`] = `
 `;
 
 exports[`with submit errors renders correctly 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
   Form - 
   <div
     errors={Object {}}
@@ -216,7 +240,13 @@ exports[`with submit errors renders correctly 1`] = `
 `;
 
 exports[`with validation errors renders correctly 1`] = `
-<div>
+<div
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
   Form - 
   <div
     errors={

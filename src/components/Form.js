@@ -13,7 +13,7 @@ const AuthForm = props => {
   const disabled = submitting || Object.entries(form.errors).length > 0
 
   return (
-    <FormikForm>
+    <FormikForm style={{ width: '100%' }}>
       {children}
       {submitError && <Error>{submitError}</Error>}
       {submitting && <Loading style={{ alignSelf: 'center' }} />}
