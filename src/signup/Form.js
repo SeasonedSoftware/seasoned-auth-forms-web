@@ -1,40 +1,15 @@
 import React from 'react'
 
 import AuthForm from '../components/Form'
-import Field from '../components/Field'
-import buildLabels from '../components/labels'
+import EmailField from '../components/EmailField'
+import PasswordField from '../components/PasswordField'
 
-const SignUpForm = ({ form, ...props }) => {
-  const labels = buildLabels(props.language)
+const SignUpForm = ({ form, language, ...props }) => {
   return (
     <AuthForm {...props} form={form}>
-      <Field
-        {...form}
-        key={'signUpEmail'}
-        name={'email'}
-        label={labels.email}
-        type={'email'}
-        value={form.values.email}
-        fullWidth
-      />
-      <Field
-        {...form}
-        key={'signUpPassword'}
-        name={'password'}
-        label={labels.password}
-        type={'password'}
-        value={form.values.password}
-        fullWidth
-      />
-      <Field
-        {...form}
-        key={'signUpPasswordConfirmation'}
-        name={'passwordConfirmation'}
-        label={labels.passwordConfirmation}
-        type={'password'}
-        value={form.values.passwordConfirmation}
-        fullWidth
-      />
+      <EmailField {...form} language={language} />
+      <PasswordField {...form} language={language} />
+      <PasswordField {...form} language={language} confirmation />
     </AuthForm>
   )
 }
