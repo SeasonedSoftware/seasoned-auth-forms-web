@@ -25,7 +25,6 @@ export default props => {
               path="/"
               render={({ create, creating, error }) => (
                 <SignIn
-                  language={'pt-BR'}
                   onSubmit={create}
                   submitting={creating}
                   submitError={error}
