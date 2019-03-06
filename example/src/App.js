@@ -41,7 +41,7 @@ export default props => {
                   submitError={error}
                   renderButton={buttonProps => (
                     <Button type="submit" variant="outlined" {...buttonProps}>
-                      Que loucura bixo
+                      My customized button
                     </Button>
                   )}
                 />
