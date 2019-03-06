@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  Form - 
+  <div
+    errors={Object {}}
+    language="en-US"
+    values={Object {}}
+  >
+    EmailField
+  </div>
+  
+  <div
+    className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
+  >
+    <div
+      disabled={false}
+      text="Send email with instructions to reset my password"
+      type="submit"
+    >
+      Button
+    </div>
+  </div>
+</div>
+`;
+
+exports[`while submitting renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  Form - 
+  <div
+    errors={Object {}}
+    language="en-US"
+    values={Object {}}
+  >
+    EmailField
+  </div>
+  
+  <div
+    style={
+      Object {
+        "alignSelf": "center",
+      }
+    }
+  >
+    Loading
+  </div>
+  <div
+    className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
+  >
+    <div
+      disabled={true}
+      text="Send email with instructions to reset my password"
+      type="submit"
+    >
+      Button
+    </div>
+  </div>
+</div>
+`;
+
+exports[`with custom renderButtom renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  Form - 
+  <div
+    errors={Object {}}
+    language="en-US"
+    values={Object {}}
+  >
+    EmailField
+  </div>
+  
+  <div
+    disabled={false}
+    text="Send email with instructions to reset my password"
+    type="submit"
+  >
+    Button
+  </div>
+</div>
+`;
+
+exports[`with submit errors renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  Form - 
+  <div
+    errors={Object {}}
+    language="en-US"
+    values={Object {}}
+  >
+    EmailField
+  </div>
+  <div>
+    Error
+  </div>
+  <div
+    className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
+  >
+    <div
+      disabled={false}
+      text="Send email with instructions to reset my password"
+      type="submit"
+    >
+      Button
+    </div>
+  </div>
+</div>
+`;
+
+exports[`with validation errors renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  Form - 
+  <div
+    errors={
+      Object {
+        "email": "is not a valid email",
+      }
+    }
+    language="en-US"
+    values={Object {}}
+  >
+    EmailField
+  </div>
+  
+  <div
+    className="MuiGrid-container-1 MuiGrid-justify-xs-center-18"
+  >
+    <div
+      disabled={true}
+      text="Send email with instructions to reset my password"
+      type="submit"
+    >
+      Button
+    </div>
+  </div>
+</div>
+`;

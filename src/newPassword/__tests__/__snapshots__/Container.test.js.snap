@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  initialValues={
+    Object {
+      "password": "",
+      "passwordConfirmation": "",
+    }
+  }
+  onSubmit={[MockFunction]}
+  render={[Function]}
+  validate={[Function]}
+>
+  Formik - 
+  <div
+    form={
+      Object {
+        "foo": "bar",
+      }
+    }
+    submitting={false}
+  >
+    Form
+  </div>
+</div>
+`;
