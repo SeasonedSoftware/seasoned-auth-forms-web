@@ -1,4 +1,4 @@
-import { required, email, length, confirmation } from 'redux-form-validators'
+import { required, length, confirmation } from 'redux-form-validators'
 import generateValidate from '../generateValidate'
 
 const errorMessages = {
