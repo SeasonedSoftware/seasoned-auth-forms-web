@@ -10,7 +10,7 @@ const Container = ({ onSubmit, ...props }) => (
     initialValues={{
       email: '',
     }}
-    validate={validate(props)}
+    validate={validate({ password: false, ...props })}
     onSubmit={onSubmit}
     render={form => <ForgetPassword {...props} form={form} />}
   />

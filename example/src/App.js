@@ -7,7 +7,7 @@ import { Grid, Button } from '@material-ui/core'
 import {
   SignIn,
   SignUp,
-  ForgetPassword,
+  ForgotPassword,
   NewPassword,
 } from 'seasoned-auth-forms-web'
 
@@ -54,10 +54,10 @@ export default props => {
               )}
             />
             <New
-              name="forgetPassword"
+              name="forgotPassword"
               path="/"
               render={({ create, creating, error }) => (
-                <ForgetPassword
+                <ForgotPassword
                   language={'pt-BR'}
                   onSubmit={create}
                   submitting={creating}

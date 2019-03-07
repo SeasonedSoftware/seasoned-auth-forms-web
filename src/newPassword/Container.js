@@ -11,7 +11,7 @@ const Container = ({ onSubmit, ...props }) => (
       password: '',
       passwordConfirmation: '',
     }}
-    validate={validate({ options: { newPassword: true }, ...props })}
+    validate={validate({ email: false, newPassword: true, ...props })}
     onSubmit={onSubmit}
     render={form => <NewPassword {...props} form={form} />}
   />

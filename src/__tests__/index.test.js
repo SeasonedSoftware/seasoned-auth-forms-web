@@ -8,8 +8,8 @@ it('exports SignUp', () => {
   expect(index.SignUp).not.toBeUndefined()
 })
 
-it('exports ForgetPassword', () => {
-  expect(index.ForgetPassword).not.toBeUndefined()
+it('exports ForgotPassword', () => {
+  expect(index.ForgotPassword).not.toBeUndefined()
 })
 
 it('exports NewPassword', () => {
