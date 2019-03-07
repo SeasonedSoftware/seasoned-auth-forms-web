@@ -4,7 +4,12 @@ import { Provider } from 'react-redux'
 import { New, Provider as CroodsProvider } from 'croods'
 import { Grid, Button } from '@material-ui/core'
 
-import { SignIn, SignUp } from 'seasoned-auth-forms-web'
+import {
+  SignIn,
+  SignUp,
+  ForgetPassword,
+  NewPassword,
+} from 'seasoned-auth-forms-web'
 
 import store from './store/store'
 
@@ -45,6 +50,29 @@ export default props => {
                       My customized button
                     </Button>
                   )}
+                />
+              )}
+            />
+            <New
+              name="forgetPassword"
+              path="/"
+              render={({ create, creating, error }) => (
+                <ForgetPassword
+                  language={'pt-BR'}
+                  onSubmit={create}
+                  submitting={creating}
+                  submitError={error}
+                />
+              )}
+            />
+            <New
+              name="newPassword"
+              path="/"
+              render={({ create, creating, error }) => (
+                <NewPassword
+                  onSubmit={create}
+                  submitting={creating}
+                  submitError={error}
                 />
               )}
             />
