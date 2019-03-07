@@ -12,7 +12,7 @@ const SignUp = ({ onSubmit, ...props }) => (
       password: '',
       passwordConfirmation: '',
     }}
-    validate={validate({ options: { newPassword: true }, ...props })}
+    validate={validate({ newPassword: true, ...props })}
     onSubmit={onSubmit}
     render={form => <Form {...props} form={form} />}
   />

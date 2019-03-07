@@ -1,4 +1,9 @@
-import { required, email, length, confirmation } from 'redux-form-validators'
+import {
+  required,
+  email as validateEmail,
+  length,
+  confirmation,
+} from 'redux-form-validators'
 import generateValidate from '../validations/generateValidate'
 
 const errorMessages = {
@@ -8,15 +13,22 @@ const errorMessages = {
   tooShort: 'is too short (minimum is 8 characters)',
 }
 
-const createValidations = ({ options = { newPassword: false } }) => ({
-  email: [required(), email()],
-  password: options.newPassword
-    ? [required(), length({ min: 8 })]
-    : [required()],
-  passwordConfirmation: [
-    required(),
-    confirmation({ field: 'password', msg: errorMessages.doesntMatch }),
-  ],
+const createValidations = ({
+  email = true,
+  password = true,
+  newPassword = false,
+  ...props
+}) => ({
+  ...(email && { email: [required(), validateEmail()] }),
+  ...(password && {
+    password: newPassword ? [required(), length({ min: 8 })] : [required()],
+  }),
+  ...(newPassword && {
+    passwordConfirmation: [
+      required(),
+      confirmation({ field: 'password', msg: errorMessages.doesntMatch }),
+    ],
+  }),
 })
 
 const createTranslations = ({ language }) =>

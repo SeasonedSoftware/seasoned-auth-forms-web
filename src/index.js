@@ -1,9 +1,9 @@
 import SeasonedSignIn from './signin/Container'
 import SeasonedSignUp from './signup/Container'
-import SeasonedForgetPassword from './forgetPassword/Container'
+import SeasonedForgotPassword from './ForgotPassword/Container'
 import SeasonedNewPassword from './newPassword/Container'
 
 export const SignIn = SeasonedSignIn
 export const SignUp = SeasonedSignUp
-export const ForgetPassword = SeasonedForgetPassword
+export const ForgotPassword = SeasonedForgotPassword
 export const NewPassword = SeasonedNewPassword
