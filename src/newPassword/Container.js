@@ -3,7 +3,7 @@ import { Formik } from 'formik'
 import PropTypes from 'prop-types'
 
 import NewPassword from './Form'
-import validate from './validate'
+import validate from '../validations/validate'
 
 const Container = ({ onSubmit, ...props }) => (
   <Formik
@@ -11,7 +11,7 @@ const Container = ({ onSubmit, ...props }) => (
       password: '',
       passwordConfirmation: '',
     }}
-    validate={validate(props)}
+    validate={validate({ options: { newPassword: true }, ...props })}
     onSubmit={onSubmit}
     render={form => <NewPassword {...props} form={form} />}
   />

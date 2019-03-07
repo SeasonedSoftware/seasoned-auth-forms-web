@@ -3,7 +3,7 @@ import { Formik } from 'formik'
 import PropTypes from 'prop-types'
 
 import Form from './Form'
-import validate from './validate'
+import validate from '../validations/validate'
 
 const SignUp = ({ onSubmit, ...props }) => (
   <Formik
@@ -12,7 +12,7 @@ const SignUp = ({ onSubmit, ...props }) => (
       password: '',
       passwordConfirmation: '',
     }}
-    validate={validate(props)}
+    validate={validate({ options: { newPassword: true }, ...props })}
     onSubmit={onSubmit}
     render={form => <Form {...props} form={form} />}
   />

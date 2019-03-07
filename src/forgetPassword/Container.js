@@ -3,7 +3,7 @@ import { Formik } from 'formik'
 import PropTypes from 'prop-types'
 
 import ForgetPassword from './Form'
-import validate from './validate'
+import validate from '../validations/validate'
 
 const Container = ({ onSubmit, ...props }) => (
   <Formik
