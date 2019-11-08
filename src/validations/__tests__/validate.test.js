@@ -177,4 +177,15 @@ describe('test options', () => {
       passwordConfirmation: "doesn't match password",
     })
   })
+
+  it('validates password length using the minimumPasswordLength option', () => {
+    const props = { newPassword: true, minimumPasswordLength: 6 }
+    const values = {
+      email: '',
+      password: '123123',
+      passwordConfirmation: '123123',
+    }
+
+    expect(validate(props)(values)).toMatchObject({})
+  })
 })

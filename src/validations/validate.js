@@ -17,11 +17,14 @@ const createValidations = ({
   email = true,
   password = true,
   newPassword = false,
+  minimumPasswordLength = 8,
   ...props
 }) => ({
   ...(email && { email: [required(), validateEmail()] }),
   ...(password && {
-    password: newPassword ? [required(), length({ min: 8 })] : [required()],
+    password: newPassword
+      ? [required(), length({ min: minimumPasswordLength })]
+      : [required()],
   }),
   ...(newPassword && {
     passwordConfirmation: [
